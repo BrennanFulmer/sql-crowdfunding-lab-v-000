@@ -24,13 +24,6 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
   HAVING over_goal >= 0; "
 end
 
-"SELECT users.name, SUM(pledges.amount) 
-FROM users 
-JOIN pledges 
-ON users.id = pledges.user_id 
-GROUP BY users.name 
-ORDER BY SUM(pledges.amount);"
-
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
   "SELECT users.name, SUM(pledges.amount) AS total
   FROM users
